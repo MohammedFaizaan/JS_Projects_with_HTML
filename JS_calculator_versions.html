@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS test</title>
+    <link rel="stylesheet" href="JS_test.css" />
+  </head>
+  <body>
+    <!-- version-1 -->
+    <h1>Version 1</h1>
+    <p>Pressing the button gives you the prompt to Calculate.</p>
+    <button onclick="version_1()">Click to access this version</button>
+    <hr />
+
+    <!-- version-2 -->
+    <h1>Version 2</h1>
+    <p>
+      Enter the values of a and b then press Calculate to get the sum of both
+    </p>
+    <input type="number" id="value_a" placeholder="Enter Value of a" />
+    <input type="number" id="value_b" placeholder="Enter Value of b" />
+    <button onclick="version_2()">Calculate</button>
+    <hr />
+
+    <!-- version -->
+    <h1>Version</h1>
+    <h1>Enter number</h1>
+    <input type="number" id="a" placeholder="Value of a" />
+    <input type="number" id="b" placeholder="Value of b" />
+    <h2>Select:</h2>
+    <button onclick="add()">Add</button>
+    <button onclick="sub()">Subtract</button>
+    <button onclick="mult()">Multiply</button>
+    <button onclick="div()">Divide</button>
+    <button onclick="clearResult()">Clear</button>
+
+    <p id="total"></p>
+    <p>
+      This version enables to add, subtract, multiply, divide and also clear.
+      Instead of the traditional alert and prompt system it displays in p tag
+    </p>
+    <hr />
+
+    <!-- version-Windows7 -->
+    <h1>Calculate</h1>
+    <div class="container-windows7">
+      <div class="display2-screen">
+        <p id="display2"></p>
+      </div>
+      <div class="button-layout">
+        <button onclick="enteredValue(1)" id="btn-1">1</button>
+        <button onclick="enteredValue(2)" id="btn-2">2</button>
+        <button onclick="enteredValue(3)" id="btn-3">3</button>
+        <button onclick="enteredValue(4)" id="btn-4">4</button>
+        <button onclick="enteredValue(5)" id="btn-5">5</button>
+        <button onclick="enteredValue(6)" id="btn-6">6</button>
+        <button onclick="enteredValue(7)" id="btn-7">7</button>
+        <button onclick="enteredValue(8)" id="btn-8">8</button>
+        <button onclick="enteredValue(9)" id="btn-9">9</button>
+        <button onclick="enteredValue(0)" id="btn-0">0</button>
+        <button onclick="enteredValue('.')" id="btn-dot">.</button>
+        <br />
+        <button onclick="operatedWith('+')" id="add">+</button>
+        <button onclick="operatedWith('-')" id="sub">-</button>
+        <button onclick="operatedWith('*')" id="mult">*</button>
+        <button onclick="operatedWith('/')" id="div">/</button>
+        <button onclick="Calculate()" id="equals">=</button>
+        <button onclick="clearDisplay()" id="clear">C</button>
+      </div>
+    </div>
+
+    <script>
+      // version-1
+      function version_1() {
+        let a = Number(prompt("Enter number a:"));
+        let b = Number(prompt("Enter number b:"));
+        let result = a + b;
+        alert(`Result of a and b is ${result}`);
+      }
+
+      // version-2
+      function version_2() {
+        let a = Number(document.getElementById("value_a").value);
+        let b = Number(document.getElementById("value_b").value);
+        let result = a + b;
+        alert(`Result of a and b is: ${result}`);
+      }
+
+      // Version-lastest
+      function add() {
+        let a = Number(document.getElementById("a").value);
+        let b = Number(document.getElementById("b").value);
+        let result = a + b;
+        // alert(`The result of a and b is: ${result}`);
+        document.getElementById(
+          "total"
+        ).textContent = `The output is: ${result}`;
+      }
+
+      function sub() {
+        let a = Number(document.getElementById("a").value);
+        let b = Number(document.getElementById("b").value);
+        let result = a - b;
+        // alert(`The result of a and b is: ${result}`);
+        document.getElementById(
+          "total"
+        ).textContent = `The output is: ${result}`;
+      }
+
+      function mult() {
+        let a = Number(document.getElementById("a").value);
+        let b = Number(document.getElementById("b").value);
+        let result = a * b;
+        // alert(`The result of a and b is: ${result}`);
+        document.getElementById(
+          "total"
+        ).textContent = `The output is: ${result}`;
+      }
+
+      function div() {
+        let a = Number(document.getElementById("a").value);
+        let b = Number(document.getElementById("b").value);
+        let result = a / b;
+        // alert(`The result of a and b is: ${result}`);
+        document.getElementById(
+          "total"
+        ).textContent = `The output is: ${result}`;
+
+        if (a === 0 && b === 0) {
+          alert("FOOL!");
+          document.getElementById(
+            "total"
+          ).textContent = `Cannot Divide by Zero`;
+        }
+
+        if (b === 0) {
+          alert(`Infinity Loop, Cannot divide the ${a} with zero`);
+          document.getElementById(
+            "total"
+          ).textContent = `Cannot Divide by Zero`;
+        }
+      }
+
+      function clearResult() {
+        document.getElementById("total").textContent = "";
+        document.getElementById("a").value = "";
+        document.getElementById("b").value = "";
+      }
+
+      // version_latest
+      let a = "";
+      let b = "";
+      let secondNum = false;
+      let result = "";
+
+      function enteredValue(num) {
+        if (!secondNum) {
+          a += num;
+          document.getElementById("display2").textContent = a;
+        } else {
+          b += num;
+          document.getElementById("display2").textContent =
+            a + " " + operator + " " + b;
+        }
+      }
+
+      function operatedWith(op) {
+        operator = op;
+        secondNum = true;
+        document.getElementById("display2").textContent = a + " " + operator;
+      }
+
+      function Calculate() {
+        let numA = Number(a);
+        let numB = Number(b);
+        if (operator === "+") result = numA + numB;
+        if (operator === "-") result = numA - numB;
+        if (operator === "*") result = numA * numB;
+        if (operator === "/") result = numA / numB;
+        document.getElementById("display2").textContent = result;
+        a = result;
+        b = "";
+        if(a === 0){
+          a = "";
+          secondNum=false;
+        }
+        return;
+      }
+
+      function clearDisplay() {
+        let a = "";
+        let b = "";
+        result = "";
+        if(a && b === 0){
+          return;
+        }
+        document.getElementById("display2").innerText = `${a}`;
+      }
+    </script>
+  </body>
+</html>
