@@ -1,0 +1,44 @@
+body{
+    background-image: url("Public/Dice_bg.png");
+    object-fit: contain;
+}
+
+h1{
+    font-size: 3em;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    margin: 50px;
+    border-radius: 2em;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.container div{
+    text-align: center;
+    margin: 10px;
+}
+
+.rollButton{
+    padding: 20px;
+    border-radius: 1em;
+}
+
+.displayResult{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 0px 30px 0px 30px;
+    border-radius: 2em;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.displayResult p{
+    font-size: 20px;
+    text-align: center;
+    right: 10px;
+    position: relative;
+}
