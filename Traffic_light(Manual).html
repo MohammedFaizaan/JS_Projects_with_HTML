@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traffic Light 🚦</title>
+    <style>
+      .container{
+        width: 21em;
+        height: 30em;
+        margin: 30px;
+        background-color: black;
+      }
+
+      #Light{
+        width: 20em;
+        height: 20em;
+        margin: 10px 0px 0px 10px;
+        background-color: grey;
+        border-radius: 10em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Traffic Light</h1>
+    <div class="container">
+      <div id="Light"></div>
+    </div>
+    <button onclick="red()" id="red">Red</button>
+    <button onclick="yellow()" id="yellow">Yellow</button>
+    <button onclick="green()" id="green">Green</button>
+    <button onclick="resetColor()" id="grey">Reset</button>
+    <script>
+      function red() {
+        document.getElementById("Light").style.background = "red";
+        return;
+      }
+      function yellow() {
+        document.getElementById("Light").style.background = "yellow";
+        return;
+      }
+      function green() {
+        document.getElementById("Light").style.background = "green";
+        return;
+      }
+      function resetColor() {
+        document.getElementById("Light").style.background = "grey";
+        return;
+      }
+    </script>
+  </body>
+</html>
