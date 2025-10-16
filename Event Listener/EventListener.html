@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Listener Testing</title>
+    <link rel="stylesheet" href="EventListener.css" />
+  </head>
+  <body>
+    <div class="colorchg">
+      <!--Color Changer App-->
+      <h1>Color Changer</h1>
+      <div class="clr_div">
+        <div class="color_bg" id="bg_clr"></div>
+        <input type="text" placeholder="Enter the color" id="enteredColor" />
+        <button id="applyButton">Apply</button>
+      </div>
+    </div>
+
+    <div class="keyDetect">
+      <!--Key Detect Press-->
+      <h1>Key Press Detector</h1>
+      <p id="Display1"></p>
+      <input
+        type="text"
+        id="keyPressID"
+        placeholder="Warning, Alerts for every word"
+      />
+    </div>
+
+    <div class="HideText">
+      <!--Hide Text-->
+      <h1>Hiding Text</h1>
+      <p id="textBox">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae,
+        magnam nulla voluptate quae mollitia quaerat numquam. Autem corrupti
+        laborum veritatis debitis molestiae, eveniet praesentium dignissimos.
+      </p>
+      <button id="hideText">Hide Text</button>
+      <button id="showText">Show Text</button>
+    </div>
+
+    <div class="counter">
+      <!--Counter-->
+      <h1>Counter</h1>
+      <div>
+        <p id="Display2"></p>
+        <button type="button" id="addBtn">+</button>
+        <button type="button" id="subBtn">-</button>
+      </div>
+    </div>
+
+    <script src="EventListener.js"></script>
+  </body>
+</html>
