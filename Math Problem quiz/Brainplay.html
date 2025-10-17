@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BrainPlay!</title>
+    <link rel="stylesheet" href="Brainplay.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1>BrainPlay!</h1>
+      </nav>
+    </header>
+
+    <main>
+      <section class="container">
+        <section class="container-box">
+          <article class="boxSection" id="box1">
+            <h1>Random math Number problem</h1>
+            <p id="display"></p>
+            <input type="text" id="textAnswer" />
+            <div class="btncontainer">
+              <button id="applyBtn">Apply</button>
+              <button id="resetBtn">Reset</button>
+            </div>
+          </article>
+
+          <article class="boxSection box2">
+            <h2>Select mode:</h2>
+            <div class="btncontainer2">
+              <button id="addMode">+</button>
+              <button id="subMode">-</button>
+              <button id="multMode">*</button>
+              <button id="divMode">/</button>
+            </div>
+          </article>
+
+          <article class="boxSection box3">
+            <h2>Select difficulty:</h2>
+            <div class="btncontainer3">
+              <button id="oneDigit">Easy</button>
+              <button id="twoDigit">Hard</button>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <section>
+        <audio src="sfx/Victory_sound.mp3" id="victorySound"></audio>
+        <audio src="sfx/Fail_sound.mp3" id="failSound"></audio>
+      </section>
+
+    </main>
+    
+    <footer>© 2025 BrainPlay!</footer>
+    
+    <script src="Brainplay_v2.js"></script>
+  </body>
+</html>
