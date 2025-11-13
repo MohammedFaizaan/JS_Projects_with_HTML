@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Card_game.css" />
+  </head>
+  <body id="myBody">
+    <h1>Color of array:</h1>
+    <p id="arrayDisplay"></p>
+
+    <div class="container">
+      <!--Runner Div-->
+      <div class="runnerDiv" id="runner_Div">
+        <!-- Runner Card -->
+        <div class="card" id="runnerbtn">
+          <div class="runnerCard" id="runnerColor">
+            <p id="display1">?</p>
+          </div>
+        </div>
+
+        <!-- Runner cards operation -->
+        <div class="cardOpr">
+          <div class="cardOprflx">
+            <div>
+              <h1>Runner</h1>
+            </div>
+            <div>
+              <h1>Score to win: 50</h1>
+              <p id="runnerScore" class="scoreBoard">Your Score: 0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- catcher div -->
+      <div class="catcherDiv" id="catcher_Div">
+        <!-- catcher card -->
+        <div class="card" id="catcherbtn">
+          <div class="catcherCard" id="catcherColor">
+            <p id="display2">?</p>
+          </div>
+        </div>
+
+        <!-- catcher cards operation -->
+        <div class="cardOpr">
+          <!-- catchers role and scoreboard -->
+          <div class="cardOprflx">
+            <div>
+              <h1>Catcher</h1>
+            </div>
+            <div>
+              <h1>Score to win: 50</h1>
+              <p id="catcherScore" class="scoreBoard">Your Score: 0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="Winnerdiv" id="showWinner">
+      <div class="Winner" id="showWinnerDiv">
+        <p id="displayWinner"></p>
+      </div>
+    </div>
+
+    <script src="Card_game.js"></script>
+  </body>
+</html>
